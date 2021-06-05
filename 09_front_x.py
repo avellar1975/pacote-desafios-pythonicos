@@ -12,10 +12,13 @@ antes de combina-las.
 """
 
 def front_x(words):
-    # +++ SUA SOLUÇÃO +++
-    return
-
-
+    lista_01 = [vorto for vorto in words if vorto[0] == 'x']
+    lista_02 = [vorto for vorto in words if vorto[0] != 'x']
+    lista_01.sort()
+    lista_02.sort()
+    lista_01.extend(lista_02)
+    return lista_01
+    
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):

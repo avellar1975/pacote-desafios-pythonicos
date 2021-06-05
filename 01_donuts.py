@@ -15,7 +15,6 @@ def donuts(count):
     else:
     	return f'Number of donuts: {count}'
     
-
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):

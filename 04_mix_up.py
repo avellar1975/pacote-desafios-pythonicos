@@ -5,16 +5,23 @@ Dadas as strings a e b, retorne uma string com a e b separados
 por um espaço '<a> <b>', além disso, troque os 2 primeiros caracteres
 das duas strings.
 
+Para a e b com tamanho 2 ou maior.
 Exemplo:
     'mix', 'pod' -> 'pox mid'
     'dog, 'dinner' -> 'dig donner'
 
-Assuma que a e b tem tamanho 2 ou maior.
+Caso a ou b tenha tamanho menor que 2
+Exemplo:
+    'i', 'ele' -> 'e ile'
+    'a', 'b' -> 'b a'
+    'ele', 'i' -> 'ile e'
 """
 
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+	if len(a) < 2 or len(b) < 2:
+		return b[:1] + a[1:] + ' ' + a[:1] + b[1:]
+	else:
+		return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -42,3 +49,6 @@ if __name__ == '__main__':
     test(mix_up, ('dog', 'dinner'), 'dig donner')
     test(mix_up, ('gnash', 'sport'), 'spash gnort')
     test(mix_up, ('pezzy', 'firm'), 'fizzy perm')
+    test(mix_up, ('i', 'ele'), 'e ile')
+    test(mix_up, ('a', 'b'), 'b a')
+    test(mix_up, ('ele', 'i'), 'ile e')

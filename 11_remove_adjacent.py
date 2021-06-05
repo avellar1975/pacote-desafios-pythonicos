@@ -7,11 +7,8 @@ adjacentes iguais são reduzidos a um único elemento.
 Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
-
 def remove_adjacent(nums):
-    # +++ SUA SOLUÇÃO +++
-    return
-
+	return [nums[i] for i in range(len(nums)) if nums[i] != nums[i - 1] or i == 0]
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 

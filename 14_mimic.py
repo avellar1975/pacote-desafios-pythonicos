@@ -89,7 +89,7 @@ def print_mimic(mimic_dict, word):
     	word = palavra
     	i += 1
  
-# Chama mimic_dict() e print_mimic()
+
 def main():
     if len(sys.argv) != 2:
         print('Utilização: ./14_mimic.py file-to-read')

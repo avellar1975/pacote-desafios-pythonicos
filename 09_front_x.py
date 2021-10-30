@@ -12,12 +12,9 @@ antes de combina-las.
 """
 
 def front_x(words):
-    lista_01 = [vorto for vorto in words if vorto[0] == 'x']
-    lista_02 = [vorto for vorto in words if vorto[0] != 'x']
-    lista_01.sort()
-    lista_02.sort()
-    lista_01.extend(lista_02)
-    return lista_01
+    listax = sorted([v for v in words if v[0] == 'x'])
+    listay = sorted([w for w in words if w[0] != 'x'])
+    return listax + listay
     
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 

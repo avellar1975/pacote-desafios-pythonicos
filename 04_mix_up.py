@@ -18,10 +18,8 @@ Exemplo:
 """
 
 def mix_up(a, b):
-	if len(a) < 2 or len(b) < 2:
-		return b[:1] + a[1:] + ' ' + a[:1] + b[1:]
-	else:
-		return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+    a, b = b[:2] + a[2:], a[:2] + b[2:]
+    return f'{a} {b}'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

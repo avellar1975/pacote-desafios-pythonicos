@@ -8,10 +8,7 @@ for menor que 2, retorne uma string vazia.
 """
 
 def both_ends(s):
-    if len(s) < 2:
-    	return ''
-    else:
-    	return s[:2] + s[-2:]
+    return (s[:2] + s[-2:]) if len(s) > 1 else ''
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

@@ -12,7 +12,12 @@ import heapq
 
 def linear_merge(list1, list2):
 	return list(heapq.merge(list1, list2))
-	
+
+"""
+Solução sem respeitar a restrição de rodar em tempo linear
+def linear_merge(list1, list2):
+    return sorted(list1 + list2)
+"""
 	
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
